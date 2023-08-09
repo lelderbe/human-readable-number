@@ -40,7 +40,7 @@ module.exports = function toReadable(number) {
     }
 
     if (number < 1000) {
-        const hundreds = (number / 100) | 0;
+        const hundreds = Math.trunc(number / 100);
         const rest = number % 100;
         return (
             dict[hundreds] +
